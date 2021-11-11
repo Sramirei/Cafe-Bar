@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Confirmación de la reserva</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Dependencias CSS  -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="css/contactenos.css" rel="stylesheet">
+    <link href="css/reserva.css" rel="stylesheet">
+
+
+    <!-- Dependencias Ventana emergente -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.7/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/themes@5.0.4/dark/dark.min.css">
+
+    <!-- Jquery -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js">
+    </script>
+
+    <script type="text/javascript">
+    </script>
+
+    <script>
+        //jquery para reservas
+        let documentoCliente = localStorage.getItem("documento");
+        let telefonoCliente = localStorage.getItem("telefono");
+        let nombreCliente = localStorage.getItem("nombre");
+        let emailCliente = localStorage.getItem("email");
+
+        let servicio = localStorage.getItem("servicio");
+        let fechaReserva = localStorage.getItem("fecha");
+        let cantPersonas = localStorage.getItem("personas");
+        let indicaciones = localStorage.getItem("indicaciones");
+
+
+        (function() {
+            emailjs.init("user_O0lEJgrwrKpZePPdle1VC");
+        })();
+        $(document).ready(function() {
+            //configuración del correo de la cuenta emailJS de
+
+            $("#datosCliente").append("<td>" + documentoCliente + "</td>");
+            $("#datosCliente").append("<td>" + nombreCliente + "</td>");
+            $("#datosCliente").append("<td>" + telefonoCliente + "</td>");
+            $("#datosCliente").append("<td>" + emailCliente + "</td>");
+
+            $("#datosReserva").append("<td>" + servicio + "</td>");
+            $("#datosReserva").append("<td>" + cantPersonas + "</td>");
+            $("#datosReserva").append("<td>" + fechaReserva + "</td>");
+            $("#datosReserva").append("<td>" + indicaciones + "</td>");
+
+            $("#btn-reserva").click(function() {
+                sendMail();
+            });
+        });
+
+        //funciton para enviar correo
+        function sendMail(params) {
+
+            var parametrosCorreo = {
+                documentoCliente: documentoCliente,
+                nombreCliente: nombreCliente,
+                telefonoCliente: telefonoCliente,
+                emailCliente: emailCliente,
+
+                servicio: servicio,
+                cantPersonas: cantPersonas,
+                fechaReserva: fechaReserva,
+                indicaciones: indicaciones,
+
+            };
+
+            emailjs
+                .send('email-cafe-bar', 'email_reservas', parametrosCorreo)
+                .then(function() {
+                    Swal.fire({
+                        title: 'Reserva realizada...',
+                        text: 'Revisa tu correo para mayor información.',
+                        icon: 'success',
+                        timer: 1000,
+                    });
+                    localStorage.clear();
+                    window.location.replace("index.html");
+                }, function(error) {
+                    console.log('Error...', error);
+                    Swal.fire({
+                        title: 'Reserva fallida...',
+                        text: 'Se genero in error al realizar la reserva, intenta de nuevo.',
+                        icon: 'error',
+                        timer: 1000,
+                    });
+                });
+        }
+    </script>
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-cente">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+            <h1 class="logo me-auto me-lg-0"><a href="index.html">EL CAFECITO</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="img/logo.png" alt="" class="img-fluid"></a>-->
+
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto " href="index.html">Inicio</a></li>
+                    <li><a class="nav-link scrollto" href="Nosotros.html">Nosotros</a></li>
+                    <li><a class="nav-link scrollto" href="Menu.html">Menu</a></li>
+                    <li><a class="nav-link scrollto" href="Servicios.html">Servicios</a></li>
+                    <li><a class="nav-link scrollto active" href="#">Contacto</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <!-- .navbar -->
+            <a href="carrito.html" class="book-a-table-btn scrollto d-none d-lg-flex"><i class="bi bi-cart"></i></a>
+
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <main id="main">
+
+        <!-- ======= reserva Section ======= -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2>HaZ Tu reserva</h2>
+                    <p>Confirmación de la reserva</p>
+                </div>
+            </div>
+
+        </section>
+        <div class="confirmar-reserva">
+            <table>
+                <tbody>
+                    <tr class="negrilla">
+                        <td>Documento</td>
+                        <td>Nombre</td>
+                        <td>Teléfono</td>
+                        <td>Email</td>
+                    </tr>
+                    <tr id="datosCliente">
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+
+                    <tr class="negrilla">
+                        <td>Tipo de servicio</td>
+                        <td>Cantidad de personas</td>
+                        <td>Fecha</td>
+                        <td>Indicaciones</td>
+                    </tr>
+
+                    <tr id="datosReserva">
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="text-align:center;">
+                            <button id="btn-reserva" class="reserva-btn-enviar">
+                                Confirmar reserva
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- End Contact Section -->
+
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-info">
+                            <h3>EL CAFECITO</h3>
+                            <p>
+                                Calle siempre Viva 123, Springfield<br><br>
+                                <strong>Telefono:</strong> +57 3124567658<br>
+                                <strong>Email:</strong> info@ejemplo.com<br>
+                            </p>
+                            <div class="social-links mt-3">
+                                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Navegación</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.html">Inicio</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Nosotros.html">Nosotros</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Menu.html">Menu</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html">Servicios</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="contactenos.html">Contacto</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Servicios</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#cumple">Celebración de cumpleaños</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#aniversario">Aniversarios</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#infantil">Fiestas infantiles</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#propuestas">Declaraciones o propuestas</a>
+                            </li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#despedidas">Despedidas</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#cena">Cena con amigos</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>¿Buscas descuentos?</h4>
+                        <p>Entra en nuestra red de restaurantes</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="Subscribete">
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+    <!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <!-- Dependencias JS  -->
+    <script src="vendor/aos/aos.js "></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
+    <script src="vendor/glightbox/js/glightbox.min.js "></script>
+    <script src="vendor/isotope-layout/isotope.pkgd.min.js "></script>
+    <script src="vendor/swiper/swiper-bundle.min.js "></script>
+
+    <!-- Template Main JS File -->
+    <script src="js/main.js "></script>
+
+
+
+</body>
+
+</html>

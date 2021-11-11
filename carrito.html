@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Restaurante Cafe</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="vendor/aos/aos.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/car.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: Restaurantly - v3.3.0
+  * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+
+<body>
+
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-cente">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+            <h1 class="logo me-auto me-lg-0"><a href="index.html">EL CAFECITO</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto" href="Index.html">Inicio</a></li>
+                    <li><a class="nav-link scrollto" href="Nosotros.html">Nosotros</a></li>
+                    <li><a class="nav-link scrollto" href="Menu.html">Menu</a></li>
+                    <li><a class="nav-link scrollto" href="Servicios.html">Servicios</a></li>
+                    <li><a class="nav-link scrollto" href="contactenos.html">Contacto</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <!-- .navbar -->
+            <a href="carrito.html" class="book-a-table-btn scrollto d-none d-lg-flex section-bg2"><i
+          class="bi bi-cart"></i></a>
+        </div>
+    </header>
+    <!-- End Header -->
+
+
+    <main id="main">
+        <section>
+            <!-- Espacio -->
+        </section>
+
+        <section class="jumbotron">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Tu carrito</h2>
+                    <p>Disfruta de nuestros deliciosos productos</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row mt-3">
+                    <div class="col">
+
+                        <form id="procesar-pago">
+
+
+                            <div id="carrito" class="form-group table-responsive">
+                                <table class="form-group table" id="lista-compra">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Imagen</th>
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Precio</th>
+                                            <th scope="col">Cantidad</th>
+                                            <th scope="col">Sub Total</th>
+                                            <th scope="col">Eliminar</th>
+                                        </tr>
+
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th colspan="4" scope="col" class="text-right"><a href="javascript:location.reload()">Calcular</a></th>
+
+                                    </tr>
+                                    <tr>
+                                        <th colspan="4" scope="col" class="text-right">SUB TOTAL :</th>
+                                        <th scope="col">
+                                            <p id="subtotal"></p>
+                                        </th>
+                                        <!-- <th scope="col"></th> -->
+                                    </tr>
+                                    <tr>
+                                        <th colspan="4" scope="col" class="text-right">PROPINA:</th>
+                                        <th scope="col">
+                                            <p id="igv"></p>
+                                        </th>
+                                        <!-- <th scope="col"></th> -->
+                                    </tr>
+                                    <tr>
+                                        <th colspan="4" scope="col" class="text-right">TOTAL :</th>
+                                        <th scope="col">
+                                            <input id="total" name="monto" class="font-weight-bold border-0" readonly style="background-color: white;"></input>
+                                        </th>
+                                        <!-- <th scope="col"></th> -->
+                                    </tr>
+
+                                </table>
+                            </div>
+
+
+                            <div class="row justify-content-between">
+                                <div class="col-md-4 mb-2">
+                                    <a href="Menu.html" class="btn btn-info btn-block">Seguir comprando</a>
+                                </div>
+                                <div class="col-xs-12 col-md-4">
+                                    <a href="compra.html" type="submit" class="btn btn-success btn-block" id="procesar-compra" value="Realizar compra">Realizar Compra</a>
+                                </div>
+                            </div>
+                        </form>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-info">
+                            <h3>EL CAFECITO</h3>
+                            <p>
+                                Calle siempre Viva 123, Springfield<br><br>
+                                <strong>Telefono:</strong> +57 3124567658<br>
+                                <strong>Email:</strong> info@ejemplo.com<br>
+                            </p>
+                            <div class="social-links mt-3">
+                                <a href="#" class="twitter"><i class="bi bi-facebook"></i></i></a>
+                                <a href="#" class="facebook"><i class="bi bi-twitter"></i></i></a>
+                                <a href="#" class="instagram"><i class="bi bi-instagram"></i></i></a>
+                                <a href="#" class="google-plus"><i class="bi bi-skype"></i></i></a>
+                                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Navegación</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.html">Inicio</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Nosotros.html">Nosotros</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Menu.html">Menu</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html">Servicios</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="contactenos.html">Contacto</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Servicios</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#cumple">Celebración de cumpleaños</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#aniversario">Aniversarios</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#infantil">Fiestas infantiles</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#propuestas">Declaraciones o propuestas</a>
+                            </li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#despedidas">Despedidas</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#cena">Cena con amigos</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>¿Buscas descuentos?</h4>
+                        <p>Entra en nuestra red de restaurantes</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="Subscribete">
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+    <!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/aos/aos.js"></script>
+    <script src="vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="vendor/php-email-form/validate.js"></script>
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="js/main.js"></script>
+
+    <script src="js/menu.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

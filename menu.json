@@ -1,0 +1,86 @@
+[
+  {
+    "id":1,
+    "precio": 15.95,
+    "title": "Latte helado de calabaza y especias",
+    "imgSrc": "https://secondcup.com/sites/default/files/styles/product_shot_large/public/product/images/iced-pumpkin-spice-latte.jpg.webp?itok=ASMMrEiU",
+    "descripcion":"Con un audaz Espresso Forte, leche fría y sabor a especias para pastel de calabaza. Servido con hielo. Cubierto con crema batida y especias para pastel de calabaza."
+  },
+  {
+    "id":2,
+    "precio": 6.95,
+    "title": "Latte de avena con especias matcha",
+    "imgSrc": "https://secondcup.com/sites/default/files/styles/product_shot_large/public/product/images/matcha-spice-oat-latte%20cropped.jpg.webp?itok=fAUWggeW",
+    "descripcion":"Cremoso y equilibrado. Este té con leche a base de plantas contiene matcha ligeramente endulzado, leche de avena cremosa y especias para hornear de otoño."
+  },
+  {
+    "id":3,
+    "precio": 12.90,
+    "title": "Café con leche",
+    "imgSrc": "https://secondcup.com/sites/default/files/styles/product_shot_large/public/product/images/Caffe_Latte.jpg.webp?itok=doL1yc2L",
+    "descripcion":"El equilibrio perfecto de un rico espresso combinado con una suave y cremosa leche al vapor y una aterciopelada espuma."
+  },
+  {
+    "id":4,
+    "precio": 50.5,
+    "title": "Café con vainilla frío",
+    "imgSrc": "https://secondcup.com/sites/default/files/styles/product_shot_large/public/product/images/VanillaBean_FlashColdBrew.jpg.webp?itok=VPJZqY9O",
+    "descripcion":"Notas cremosas de vainilla con la cantidad justa de dulzura. El café es combinado con nuestro exclusivo jarabe de vainilla. Servido con hielo."
+  },
+  {
+    "id":5,
+    "precio": 10,
+    "title": "Impulso de mango verde",
+    "imgSrc": "https://secondcup.com/sites/default/files/styles/product_shot_large/public/product/images/GreenMangoSmoothie_0.jpg.webp?itok=5wXR16vP",
+    "descripcion":"Un bocadillo nutritivo para llevar, hecho con puré de mango, col rizada pura y espinacas en polvo, proteína de suero y 1 plátano entero. Amigable con el gluten."
+  },
+  {
+    "id":6,
+    "precio": 150,
+    "title": "Café frio",
+    "imgSrc": "https://secondcup.com/sites/default/files/styles/product_shot_large/public/product/images/Flash_ColdBrew.jpg.webp?itok=9_UMCklY",
+    "descripcion":"Nuestro exclusivo café está recién preparado directamente sobre hielo, conservando los aromas y brindando un sabor más suave que el café helado tradicional. Disponible endulzado o sin endulzar. Servido con hielo."
+  },
+  {
+    "id":7,
+    "precio": 150,
+    "title": "Capuchino",
+    "imgSrc": "https://secondcup.com/sites/default/files/styles/product_shot_large/public/product/images/Cappuccino_0.jpg.webp?itok=yphOEX4Y",
+    "descripcion":"Un sorbo relajante que combina porciones iguales de espresso, leche al vapor y espuma para una experiencia de degustación ideal."
+  },
+    {
+      "id":8,
+    "precio": 150,
+    "title": "Caramello corretto",
+    "imgSrc": "https://secondcup.com/sites/default/files/styles/product_shot_large/public/product/images/Caramel_Corretto.jpg.webp?itok=Ty_WWBMZ",
+    "descripcion":"Una tentadora mezcla de caramelo cremoso y vainilla suave, cubierta con un rico rociado de caramelo sobre la espuma."
+  },
+    {
+      "id":9,
+    "precio": 150,
+    "title": "Tè chai latte",
+    "imgSrc": "https://secondcup.com/sites/default/files/styles/product_shot_large/public/product/images/Chai_Latte.jpg.webp?itok=wODohdtf",
+    "descripcion":"Un latte de té audazmente aromático con notas altas de canela y cardamomo combinado con té negro indonesio de la región de Bandung."
+  },
+    {
+      "id":10,
+    "precio": 150,
+    "title": "Batido de almendra",
+    "imgSrc": "https://secondcup.com/sites/default/files/styles/product_shot_large/public/product/images/AlmondDateSmoothie_0.jpg.webp?itok=dZ-k3_W4",
+    "descripcion":"El batido de almendras y dátiles con lino ofrece un delicioso perfil cremoso y de nuez y está endulzado con los dulces de la naturaleza: los dátiles. Elaborado con 1 plátano entero. Amigable con el gluten. Libre de lácteos. Vegano."
+  },
+    {
+      "id":11,
+    "precio": 150,
+    "title": "Latte de avena con especias matcha helado",
+    "imgSrc": "https://secondcup.com/sites/default/files/styles/product_shot_large/public/product/images/iced-matcha-spice-oat-latte-cropped.jpg.webp?itok=1PaFzzDd",
+    "descripcion":"¡Cremoso y delicioso! Este latte de té helado a base de plantas contiene matcha ligeramente endulzado, leche de avena cremosa y especias para hornear de otoño. Servido con hielo."
+  },
+    {
+      "id":12,
+    "precio": 150,
+    "title": "Chocolate caliente con vainilla",
+    "imgSrc": "https://secondcup.com/sites/default/files/styles/product_shot_large/public/product/images/VanillaBean_HotChocolate.jpg.webp?itok=Pl8GBOyk",
+    "descripcion":"Un giro indulgente al chocolate caliente tradicional, con pura vainilla de Madagascar y cremosa leche al vapor. Servido con crema batida."
+  }
+]

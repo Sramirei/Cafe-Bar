@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Reserva</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Dependencias Ventana emergente -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.7/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/themes@5.0.4/dark/dark.min.css">
+
+    <!-- Jquery -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <!-- <link rel="stylesheet" href="css/estilos.css" /> -->
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Vendor CSS Files -->
+    <link href="vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="vendor/aos/aos.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="css/contactenos.css" rel="stylesheet">
+    <link href="css/reserva.css" rel="stylesheet">
+    <link href="css/flotante.css" rel="stylesheet">
+
+
+    <!-- =======================================================
+  * Template Name: Restaurantly - v3.3.0
+  * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-cente">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+            <h1 class="logo me-auto me-lg-0"><a href="index.html">EL CAFECITO</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="img/logo.png" alt="" class="img-fluid"></a>-->
+
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto " href="index.html">Inicio</a></li>
+                    <li><a class="nav-link scrollto" href="Nosotros.html">Nosotros</a></li>
+                    <li><a class="nav-link scrollto" href="Menu.html">Menu</a></li>
+                    <li><a class="nav-link scrollto active" href="Servicios.html">Servicios</a></li>
+                    <li><a class="nav-link scrollto" href="#">Contacto</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <!-- .navbar -->
+            <a href="carrito.html" class="book-a-table-btn scrollto d-none d-lg-flex"><i class="bi bi-cart"></i></a>
+
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <main id="main">
+
+        <!-- ======= reserva Section ======= -->
+        <section id="contact" class="contact">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Haz tu reserva</h2>
+                    <p>Comparte tus momentos y fechas especiales con Nosotros</p>
+                </div>
+            </div>
+
+            <form class="formulario" id="formulario">
+
+                <!-- aqui estan los campos del formulario -->
+                <dvi class="formulario__grupo" id="grupo__nombre">
+                    <label for="nombre" class="label_nombre">Nombre Completo</label>
+                    <div class="formulario-input">
+                        <input type="text" class="formulario__input" name="nombre" id="nombre" minlength="1" maxlength="40" placeholder="Escriba su nombre completo">
+                    </div>
+                    <!-- aqui esta el mensaje de error -->
+                    <p class="formulario__input-error">En este campo no pueden ir numeros o caracteres especiales(#,%,&-1232) </p>
+                </dvi>
+
+                <!-- aqui estan los campos del formulario -->
+                <dvi class="formulario__grupo" id="grupo__email">
+                    <label for="email" class="label_email">Email</label>
+                    <div class="formulario-input">
+                        <input type="text" class="formulario__input" name="email" id="email" minlength="1" maxlength="50" placeholder="ejemplo@xxx.com">
+                    </div>
+                    <!-- aqui esta el mensaje de error -->
+                    <p class="formulario__input-error">Por favor proporcione un email Valido</p>
+                </dvi>
+
+                <!-- aqui estan los campos del formulario -->
+                <dvi class="formulario__grupo" id="grupo__documento">
+                    <label for="documento" class="label_documento">Documento</label>
+                    <div class="formulario-input">
+                        <input type="text" class="formulario__input" name="documento" id="documento" maxlength="10" placeholder="128993994">
+                    </div>
+                    <!-- aqui esta el mensaje de error -->
+                    <p class="formulario__input-error">Por favor proporcione un numero de documento valido</p>
+                </dvi>
+
+                <!-- aqui estan los campos del formulario -->
+                <dvi class="formulario__grupo" id="grupo__telefono">
+                    <label for="telefono" class="label_telefono">Telefono</label>
+                    <div class="formulario-input">
+                        <input type="text" class="formulario__input" name="telefono" id="telefono" maxlength="10" placeholder="3124567845">
+                    </div>
+                    <!-- aqui esta el mensaje de error -->
+                    <p class="formulario__input-error">Por favor proporcione un número de Telefono valido</p>
+                </dvi>
+
+                <dvi class="formulario__grupo" id="grupo__servicio">
+                    <label for="servicio" class="label_servicio">servicio</label>
+                    <div class="formulario-select">
+                        <select class="formulario__select" aria-label=".form-select-sm example" name="servicio" id="servicio">
+                          <option selected value= 0 >Servicios</option>
+                          <option value="cumpleanios">Cumpleaños</option>
+                          <option value="aniversario">Aniversario</option>
+                          <option value="fiesta">Fiesta Infantil</option>
+                          <option value="propuestas">Declaraciones o Propuestas</option>
+                          <option value="despedidas">Despedidas</option>
+                          <option value="cena">Cena Con Amigos</option>
+                        </select>
+                    </div>
+                    <!-- este es el letrero de cuando tenga un error -->
+                    <p class="formulario__select-error">Selecione un servicio </p>
+                </dvi>
+
+                <!-- aqui estan los campos del formulario -->
+                <dvi class="formulario__grupo" id="grupo__personas">
+                    <label for="personas" class="label_personas">Personas que asistiran</label>
+                    <div class="formulario-input">
+                        <input type="text" class="formulario__input" name="personas" id="personas" placeholder="1" maxlength="2">
+                    </div>
+                    <!-- aqui esta el mensaje de error -->
+                    <p class="formulario__input-error">Por favor proporcione el numero de personas que van a asistir( hasta 15 personas)</p>
+                    <p class="formulario__input-error">En este campo solo pueden ir Numeros(12345..)</p>
+                </dvi>
+
+
+                <!-- aqui estan los campos del formulario -->
+                <dvi class="formulario__grupo" id="grupo__fecha">
+                    <label for="fecha" class="label_fecha">Fecha de su reserva</label>
+                    <div class="formulario-input">
+                        <input type="date" class="formulario__input" name="fecha" id="fecha">
+                    </div>
+                    <!-- aqui esta el mensaje de error -->
+                    <p class="formulario__input-error">Por favor proporcione una fecha valida (Fecha dd/mm/aaaa)</p>
+                </dvi>
+
+                <!-- aqui estan los campos del formulario -->
+                <dvi class="formulario__grupo" id="grupo__hora">
+                    <label for="hora" class="label_hora">Hora de Su reserva</label>
+                    <div class="formulario-input">
+                        <input type="time" class="formulario__input" name="hora" id="hora">
+                    </div>
+                    <!-- aqui esta el mensaje de error -->
+                    <p class="formulario__input-error">Verifique si la hora Correctamente (Sistema horario de 24 horas hh:mm)</p>
+                </dvi>
+
+                <div class="box">
+                    <label>Dejanos Tus Indicaciones.</label>
+                    <textarea rows="2" maxlength="150" class="indicaciones" id="indicaciones"></textarea>
+                    <div id="contador">0/150</div>
+                </div>
+
+                <div class="formulario__grupo" id="grupo__terminos">
+                    <label class="formulario__label">
+            <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+            Acepto Todos los Terminos y Condiciones.
+          </label>
+                </div>
+                </div>
+                <p class="formulario__input-error">Por favor Aceptelos terminos y Condiciones</p>
+                </dvi>
+
+                <div class="formulario__grupo-btn-enviar">
+                    <button type="submit" class="reserva-btn-enviar" id="reserva-btn-enviar">Realizar reserva</button>
+                    <p class="formulario__mensaje" id="formulario__mensaje"> Rellene los campos Correctamente</p>
+                </div>
+            </form>
+
+        </section>
+        <!-- End Contact Section -->
+
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-info">
+                            <h3>EL CAFECITO</h3>
+                            <p>
+                                Calle siempre Viva 123, Springfield<br><br>
+                                <strong>Telefono:</strong> +57 3124567658<br>
+                                <strong>Email:</strong> info@ejemplo.com<br>
+                            </p>
+                            <div class="social-links mt-3">
+                                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Navegación</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.html">Inicio</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Nosotros.html">Nosotros</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Menu.html">Menu</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html">Servicios</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="contactenos.html">Contacto</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Servicios</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#cumple">Celebración de cumpleaños</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#aniversario">Aniversarios</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#infantil">Fiestas infantiles</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#propuestas">Declaraciones o propuestas</a>
+                            </li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#despedidas">Despedidas</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#cena">Cena con amigos</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>¿Buscas descuentos?</h4>
+                        <p>Entra en nuestra red de restaurantes</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="Subscribete">
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+    <!-- End Footer -->
+
+
+    <!-- Vendor JS Files -->
+    <script src="vendor/aos/aos.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="js/main.js"></script>
+    <script src="js/validacion-reserva.js"></script>
+
+
+
+</body>
+
+</html>
